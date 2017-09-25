@@ -1,4 +1,4 @@
-package com.chad.baserecyclerviewadapterhelper;
+package com.chad.baserecyclerviewadapterhelper.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chad.baserecyclerviewadapterhelper.R;
 import com.chad.baserecyclerviewadapterhelper.adapter.PullToRefreshAdapter;
 import com.chad.baserecyclerviewadapterhelper.base.BaseActivity;
 import com.chad.baserecyclerviewadapterhelper.data.DataServer;
@@ -50,6 +51,7 @@ public class PullToRefreshUseActivity extends BaseActivity implements BaseQuickA
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         setTitle("Pull TO Refresh Use");
         setBackBtn();
+
         initAdapter();
         addHeadView();
     }
@@ -118,6 +120,7 @@ public class PullToRefreshUseActivity extends BaseActivity implements BaseQuickA
         mRecyclerView.setAdapter(pullToRefreshAdapter);
         mCurrentCounter = pullToRefreshAdapter.getData().size();
 
+        // 点击事件
         mRecyclerView.addOnItemTouchListener(new OnItemClickListener() {
             @Override
             public void onSimpleItemClick(final BaseQuickAdapter adapter, final View view, final int position) {

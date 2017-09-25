@@ -12,10 +12,11 @@
 **------------------------------------------------------------------------------
 ********************************End of Head************************************\
 */
-package com.chad.baserecyclerviewadapterhelper;
+package com.chad.baserecyclerviewadapterhelper.activity;
 
 import android.app.Application;
 
+import com.chad.baserecyclerviewadapterhelper.BuildConfig;
 import com.chad.baserecyclerviewadapterhelper.util.Utils;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
