@@ -18,6 +18,7 @@ import java.util.Random;
  * Created by tysheng
  * Date: 2017/5/25 10:41.
  * Email: tyshengsx@gmail.com
+ * 从上面刷新数据
  */
 
 public class UpFetchUseActivity extends BaseActivity {
