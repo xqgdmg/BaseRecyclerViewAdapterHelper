@@ -51,8 +51,16 @@ public class ItemClickActivity extends BaseActivity {
         adapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                Log.e("chris","view.getId()==" + view.getId());
+                if (view.getId() == R.id.iv_num_reduce){
+                    Toast.makeText(ItemClickActivity.this, "iv_num_reduce" + position, Toast.LENGTH_SHORT).show();
+                }else if (view.getId() == R.id.iv_num_add){
+                    Toast.makeText(ItemClickActivity.this, "iv_num_add" + position, Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(ItemClickActivity.this, "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
+                }
                 Log.d(TAG, "onItemChildClick: ");
-                Toast.makeText(ItemClickActivity.this, "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
+
             }
         });
         adapter.setOnItemChildLongClickListener(new BaseQuickAdapter.OnItemChildLongClickListener() {
@@ -63,60 +71,6 @@ public class ItemClickActivity extends BaseActivity {
                 return true;
             }
         });
-/**
- * you can also use this way to solve your click Event
- */
-//        mRecyclerView.addOnItemTouchListener(new OnItemClickListener() {
-//            /**
-//             * Callback method to be invoked when an item in this AdapterView has
-//             * been clicked.
-//             *
-//             * @param view     The view within the AdapterView that was clicked (this
-//             *                 will be a view provided by the adapter)
-//             * @param position The position of the view in the adapter.
-//             */
-//            @Override
-//            public void onSimpleItemClick(final BaseQuickAdapter adapter, final View view, final int position) {
-//                Log.d(TAG, "SimpleOnItemClick: ");
-//
-//            }
-//            /**
-//             * callback method to be invoked when an chidview in this view has been
-//             * click and held
-//             *
-//             * @param view     The view whihin the AbsListView that was clicked
-//             * @param position The position of the view int the adapter
-//             * @return true if the callback consumed the long click ,false otherwise
-//             */
-//            @Override
-//            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-//                Logger.d("onItemChildClick "+position+" be click");
-//                Toast.makeText(ItemClickActivity.this, "onItemChildClick" + position, Toast.LENGTH_SHORT).show();
-//
-//            }
-//
-//            /**
-//             * Callback method to be invoked when an item in this view has been clicked and held.
-//             * @param adapter
-//             * @param view
-//             * @param position
-//             */
-//            @Override
-//            public void onItemLongClick(final BaseQuickAdapter adapter, final View view, final int position) {
-//                Toast.makeText(ItemClickActivity.this, "onItemLongClick" + position, Toast.LENGTH_SHORT).show();
-//            }
-//            /**
-//             * Callback method to be invoked when an itemchild in this view has been clicked and held.
-//             * @param adapter
-//             * @param view
-//             * @param position
-//             */
-//            @Override
-//            public void onItemChildLongClick(final BaseQuickAdapter adapter, final View view, final int position) {
-//                Toast.makeText(ItemClickActivity.this, "onItemChildLongClick" + position, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
 
     }
 
