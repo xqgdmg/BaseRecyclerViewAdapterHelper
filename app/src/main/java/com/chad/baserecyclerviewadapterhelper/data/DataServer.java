@@ -55,31 +55,23 @@ public class DataServer {
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+
         list.add(new MySection(true, "Section 2", false));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+
         list.add(new MySection(true, "Section 3", false));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+
         list.add(new MySection(true, "Section 4", false));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+
         list.add(new MySection(true, "Section 5", false));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        return list;
-    }
-
-    public static List<String> getStrData() {
-        List<String> list = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            String str = HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK;
-            if (i % 2 == 0) {
-                str = CYM_CHAD;
-            }
-            list.add(str);
-        }
         return list;
     }
 
@@ -95,19 +87,5 @@ public class DataServer {
 
         return list;
     }
-
-//    public static List<MultipleItem> getMultipleChildView() {
-//        List<MultipleItem> list = new ArrayList<>();
-//        for (int i = 0; i <= 4; i++) {
-//            list.add(new ClickEntity(ClickEntity.CLICK_ITEM_VIEW, MultipleItem.TEXT_SPAN_SIZE, CYM_CHAD));
-//            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.BIG_IMG_SPAN_SIZE));
-//            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.IMG_SPAN_SIZE));
-//            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.IMG_SPAN_SIZE));
-//            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.IMG_SPAN_SIZE));
-//        }
-//
-//        return list;
-//    }
-
 
 }
